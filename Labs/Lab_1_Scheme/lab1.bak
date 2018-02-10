@@ -1,0 +1,31 @@
+#lang plai
+(define (add-one n)
+  (+ 1 n))
+
+(define (repeated f count)
+  (cond [(= count 0)(lambda (x)
+                      x)]
+        [else (lambda (x)
+                (f ((repeated f (- count 1)) x)))]))
+
+(define add-one-five-times
+  (repeated add-one 5))
+
+(define (multiply-by-two n)
+  (* 2 n))
+
+(define add-and-multiply
+  ((repeated add-one 5)
+  (repeated multiply-by-two 2)))
+
+
+  
+  
+(test (add-one-five-times 0) 5)
+(test (add-one-five-times 10) 15)
+(test (add-and-multiply 0) 20)
+
+(define (add1-filter-odd n)
+  (map add-one (filter odd? n)))
+
+
