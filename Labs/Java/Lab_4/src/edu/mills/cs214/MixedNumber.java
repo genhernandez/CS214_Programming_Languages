@@ -4,11 +4,22 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Represents a numerical value as a mixed number.
+ * @author Genesis Hernandez
+ *
+ */
 public class MixedNumber extends Num {
 	private int wholeNumber;
 	private int numerator;
 	private int denominator;
 	
+	/**
+	 * Create a mixed number. 
+	 * @param wholeNumber  the whole number
+	 * @param numerator  the numerator
+	 * @param denominator  the denominator
+	 */
 	public MixedNumber(int wholeNumber, int numerator, int denominator) {
 		this.wholeNumber = wholeNumber;
 		this.numerator = numerator;

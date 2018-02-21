@@ -1,5 +1,10 @@
-package edu.mills.cs214;
+package edu.mills.cs214.extra_credit;
 
+/**
+ * Comparable version of Number.
+ * @author Genesis Hernandez
+ *
+ */
 public abstract class Num extends Number implements Comparable<Num>{
 	
 	@Override
@@ -30,8 +35,8 @@ public abstract class Num extends Number implements Comparable<Num>{
 	
 	@Override 
 	public boolean equals(Object other) {
-		if(other instanceof Num) {
-			Num num = (Num)other;
+		if(other instanceof Number) {
+			Number num = (Number)other;
 			return this.doubleValue() == num.doubleValue();
 		}
 		return false;

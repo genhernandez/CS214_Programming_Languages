@@ -4,11 +4,22 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Represents a numerical value as a mixed number.
+ * @author Genesis Hernandez
+ *
+ */
 public class MixedNumber extends Num {
 	private int wholeNumber;
 	protected int numerator;
 	protected int denominator;
 	
+	/**
+	 * Creates a mixed number. Denominator must be greater than 0.
+	 * @param wholeNumber  the whole number
+	 * @param numerator  the numerator
+	 * @param denominator  the denominator
+	 */
 	public MixedNumber(int wholeNumber, int numerator, int denominator) {
 		if(denominator == 0) {
 			throw new IllegalArgumentException("Denominator cannot be 0");
@@ -42,7 +53,7 @@ public class MixedNumber extends Num {
 		Fraction f3 = new Fraction(1, 3);
 		Fraction f4 = new Fraction(3, 9);
 		
-		
+		System.out.println("Testing extra credit." );
 		System.out.println("Testing toString() on MixedNumber");
 		System.out.println("mixNum1.toString() should be 1 2/3 and is: " + mixNum1.toString());
 		System.out.println("mixNum2.toString() should be 1 4/6 and is: " + mixNum2.toString());
@@ -101,9 +112,6 @@ public class MixedNumber extends Num {
 		System.out.println("unsorted list: " + list);
 		Collections.sort(list);
 		System.out.println("sorted list: " + list);
-		
-
-
 	}
 
 }
