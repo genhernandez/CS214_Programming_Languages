@@ -14,12 +14,12 @@ public abstract class Num extends Number implements Comparable<Num>{
 	
 	@Override
 	public long longValue() {
-		return (long) Math.round(doubleValue());
+		return (long) doubleValue();
 	}
 	
 	@Override
 	public int intValue() {
-		return (int) Math.round(doubleValue());
+		return (int) doubleValue();
 	}
 	
 	@Override
